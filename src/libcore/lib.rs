@@ -78,7 +78,7 @@
 #![feature(inclusive_range_syntax)]
 #![feature(intrinsics)]
 #![feature(lang_items)]
-#![feature(never_type)]
+#![feature(exhaustive_patterns)]
 #![feature(no_core)]
 #![feature(on_unimplemented)]
 #![feature(optin_builtin_traits)]
@@ -92,6 +92,7 @@
 #![feature(unwind_attributes)]
 #![feature(doc_spotlight)]
 #![feature(rustc_const_unstable)]
+#![cfg_attr(stage0, feature(never_type))]
 
 #[prelude_import]
 #[allow(unused)]

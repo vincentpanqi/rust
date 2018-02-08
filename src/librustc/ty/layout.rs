@@ -1307,7 +1307,7 @@ impl<'a, 'tcx> LayoutCx<'tcx, TyCtxt<'a, 'tcx, 'tcx>> {
                     StructKind::AlwaysSized)?
             }
 
-            ty::TyTuple(tys, _) => {
+            ty::TyTuple(tys) => {
                 let kind = if tys.len() == 0 {
                     StructKind::AlwaysSized
                 } else {
@@ -2232,7 +2232,7 @@ impl<'a, 'tcx> TyLayout<'tcx> {
                 substs.field_tys(def_id, tcx).nth(i).unwrap()
             }
 
-            ty::TyTuple(tys, _) => tys[i],
+            ty::TyTuple(tys) => tys[i],
 
             // SIMD vector types.
             ty::TyAdt(def, ..) if def.repr.simd() => {

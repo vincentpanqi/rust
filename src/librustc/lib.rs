@@ -57,7 +57,7 @@
 #![cfg_attr(windows, feature(libc))]
 #![feature(macro_vis_matcher)]
 #![feature(match_default_bindings)]
-#![feature(never_type)]
+#![feature(exhaustive_patterns)]
 #![feature(non_exhaustive)]
 #![feature(nonzero)]
 #![feature(quote)]
